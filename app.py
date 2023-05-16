@@ -30,7 +30,7 @@ def set_png_as_page_bg(png_file):
 set_png_as_page_bg('6.JPG')
 
 
-classifier_name=['XGBoost', 'Random Forest']
+classifier_name=['XGBoost', 'Гадание на кофейной гуще']
 option = st.sidebar.selectbox('Евгений Викторович, а какой алгоритм выбираешь ?', classifier_name)
 st.subheader(option)
 
