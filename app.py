@@ -31,7 +31,7 @@ set_png_as_page_bg('6.JPG')
 
 
 classifier_name=['XGBoost', 'Гадание на кофейной гуще']
-option = st.sidebar.selectbox('Евгений Викторович, какой алгоритм выбираешь ?', classifier_name)
+option = st.sidebar.selectbox('Евгений Викторович, какой алгоритм запустить?', classifier_name)
 st.subheader(option)
 
 
@@ -56,7 +56,7 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
 
 
 def main():
-    st.title("Прогнозирование оттока клиентов")
+    st.title("Прогноз оттока клиентов")
     html_temp = """
     <div style="background-color:white ;padding:10px">
     <h2 style="color:red;text-align:center;">Заполни форму</h2>
