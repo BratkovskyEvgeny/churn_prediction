@@ -96,12 +96,12 @@ def main():
     EstimatedSalary = st.slider("Зарплата", 0.00, 200000.00)
 
     churn_html = """  
-              <div style="background-color:#F6EFEF;padding:10px >
+              <div style="background-color:#F6EFEF;padding:20px >
                <h2 style="color:red;text-align:center;"> Теряем клиента</h2>
                </div>
             """
     no_churn_html = """  
-              <div style="background-color:#F0F6EF;padding:10px >
+              <div style="background-color:#F0F6EF;padding:20px >
                <h2 style="color:green ;text-align:center;"> Остаётся в банке</h2>
                </div>
             """
