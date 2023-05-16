@@ -50,7 +50,7 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
         pred = '{0:.{1}f}'.format(prediction[0][0], 2)
 
     else:
-        st.balloons()
+        pred=0.50
         st.markdown('Наверное, клиент останется в банке, но это не точно да и вообще надо звонить в Битву экстрасенсов.')
 
     return float(pred)
