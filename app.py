@@ -97,12 +97,12 @@ def main():
 
     churn_html = """  
               <div style="background-color:#f44336;padding:20px >
-               <h2 style="color:red;text-align:center;"> Теряем клиента</h2>
+               <h2 style="color:red;text-align:center;"> Жаль, но теряем клиента.</h2>
                </div>
             """
     no_churn_html = """  
               <div style="background-color:#94be8d;padding:20px >
-               <h2 style="color:green ;text-align:center;"> Остаётся в банке</h2>
+               <h2 style="color:green ;text-align:center;"> Ура, клиент остаётся в банке !!!</h2>
                </div>
             """
 
