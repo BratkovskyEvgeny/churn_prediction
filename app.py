@@ -31,7 +31,7 @@ set_png_as_page_bg('6.JPG')
 
 
 classifier_name=['XGBoost', 'Гадание на кофейной гуще']
-option = st.sidebar.selectbox('Евгений Викторович, а какой алгоритм выбираешь ?', classifier_name)
+option = st.sidebar.selectbox('Евгений Викторович, какой алгоритм выбираешь ?', classifier_name)
 st.subheader(option)
 
 
@@ -56,10 +56,10 @@ def predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, Ha
 
 
 def main():
-    st.title("Прогнозирование оттока клиентов банка")
+    st.title("Прогнозирование оттока клиентов")
     html_temp = """
-    <div style="background-color:teal ;padding:10px">
-    <h2 style="color:yellow;text-align:center;">Churn Classification</h2>
+    <div style="background-color:white ;padding:10px">
+    <h2 style="color:red;text-align:center;">Заполни форму</h2>
     </div>
     """
     st.markdown(html_temp, unsafe_allow_html=True)
@@ -96,18 +96,18 @@ def main():
 
     churn_html = """  
               <div style="background-color:#F6EFEF;padding:10px >
-               <h2 style="color:red;text-align:center;"> A churn customer</h2>
+               <h2 style="color:red;text-align:center;"> Теряем клиента</h2>
                </div>
             """
     no_churn_html = """  
               <div style="background-color:#F0F6EF;padding:10px >
-               <h2 style="color:green ;text-align:center;"> not a churn customer</h2>
+               <h2 style="color:green ;text-align:center;"> Остаётся в банке</h2>
                </div>
             """
 
     if st.button('Сделать прогноз'):
         output = predict_churn(CreditScore, Geo, Gen, Age, Tenure, Balance, NumOfProducts, HasCrCard, IsActiveMember, EstimatedSalary)
-        st.success('Вероятность оттока клиентов составляет {}'.format(output))
+        st.success('Вероятность оттока составляет {}'.format(output))
         st.balloons()
 
         if output >= 0.5:
