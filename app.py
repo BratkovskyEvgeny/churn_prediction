@@ -1,4 +1,5 @@
-
+import sklearn
+from sklearn.ensemble import GradientBoostingClassifier
 
 import streamlit as st
 import pickle
